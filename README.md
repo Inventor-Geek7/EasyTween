@@ -1,6 +1,14 @@
+<!--
+ * @Description: 
+ * @Autor: geek7
+ * @Version: 1.0
+ * @Date: 2022-01-20 15:58:45
+ * @LastEditors: geek7
+ * @LastEditTime: 2022-02-07 18:43:48
+-->
 # EasyTween
 **支持2D&3D**
-![](readmeImgs/easyTween2.gif)
+![](readmeImgs/tween.gif)
 
 
 ## 更清晰的写法
