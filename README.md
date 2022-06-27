@@ -10,6 +10,26 @@
 **支持2D&3D**
 ![](readmeImgs/tween.gif)
 
+## 更新
+2022.06.27 新增了贝塞尔动作
+``` typescript 
+es.tween(this.sprite).
+bezier(1.0,
+    new Laya.Point(0,0), 
+    new Laya.Point(100,100), 
+    new Laya.Point(300,0)
+    ).call( this.callbackFunction ).start();
+```
+
+## 核心源码路径
+[demo/laya2.12_tweenDemo/src/tween/tween_core.ts](demo/laya2.12_tweenDemo/src/tween/tween_core.ts)
+
+## 食用方式 
+- 直接拷贝这个[demo/laya2.12_tweenDemo/src/tween/tween_core.ts](demo/laya2.12_tweenDemo/src/tween/tween_core.ts)文件到你的项目中
+
+- 如果你使用过cocos里的tween或者egret里的tween 那你很快就能适应它
+- 如果你没有以上的使用经验 可以参考以下案例
+
 
 ## 更清晰的写法
 ```typescript
