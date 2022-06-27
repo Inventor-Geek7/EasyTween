@@ -1,4 +1,4 @@
-module es {
+export module es {
     /** 新建一个tween动作 */
     export function tween(target): tween_action {
         let act = new tween_action();

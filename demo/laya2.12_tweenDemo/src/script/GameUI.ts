@@ -1,5 +1,6 @@
 import { b2Fixture } from "../../libs/box2d";
-import { gk7 } from "../tween/tween_core";
+import { es } from "../tween/tween_core";
+
 import { ui } from "./../ui/layaMaxUI";
 /**
  * 本示例采用非脚本的方式实现，而使用继承页面基类，实现页面逻辑。在IDE里面设置场景的Runtime属性即可和场景进行关联
@@ -12,7 +13,6 @@ export default class GameUI extends ui.test.TestSceneUI {
     
     constructor() {
         super();
-
         //添加3D场景
         var scene: Laya.Scene3D = Laya.stage.addChild(new Laya.Scene3D()) as Laya.Scene3D;
 
@@ -45,7 +45,7 @@ export default class GameUI extends ui.test.TestSceneUI {
 
         //3D缓动
         box.transform.localScaleX
-        gk7.tween(box.transform).to(1.0, {
+        es.tween(box.transform).to(1.0, {
             localScaleX: 1.4,
             localScaleY: 1.4,
             localScaleZ: 1.4
@@ -58,7 +58,7 @@ export default class GameUI extends ui.test.TestSceneUI {
         }).loop(-1).start();
 
         //2D缓动
-        gk7.tween(this.btn_test).to(1.0,{
+        es.tween(this.btn_test).to(1.0,{
             scaleX:1.2,
             scaleY:1.2,
             alpha:0
@@ -71,7 +71,7 @@ export default class GameUI extends ui.test.TestSceneUI {
         
         //ease缓动
         let src = box_clone.transform.localPosition.clone();
-        gk7.tween(box_clone.transform).to(1.0,{
+        es.tween(box_clone.transform).to(1.0,{
             localPositionY:1.0
         },Laya.Ease.bounceOut).delay(1.0).call(()=>{
             //等待一秒后 回调设置位置到起始位置
